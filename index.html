@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>F# Community Incubation Projects Space</title>
+    <title>FsLab - THe F# Community Incubation Projects Space for Data Science</title>
     <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="assets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/grid.css">
@@ -14,7 +14,7 @@
 
       // Put custom repo URL's in this object, keyed by repo name.
       var repoUrls = {
-        //"riemann-csharp": "http://fsprojects.github.io/riemann-csharp/",
+        //"riemann-csharp": "http://fslaborg.github.io/riemann-csharp/",
       };
 
       function repoUrl(repo) {
@@ -72,7 +72,7 @@
         repos = repos || [];
         page = page || 1;
 
-        var uri = "https://api.github.com/orgs/fsprojects/repos?callback=?"
+        var uri = "https://api.github.com/orgs/fslaborg/repos?callback=?"
                 + "&per_page=100"
                 + "&page="+page;
 
@@ -128,7 +128,7 @@
       }
       addRepos();
 
-      $.getJSON("https://api.github.com/orgs/fsprojects/members?callback=?", function (result) {
+      $.getJSON("https://api.github.com/orgs/fslaborg/members?callback=?", function (result) {
         var members = result.data;
 
         $(function () {
@@ -174,20 +174,20 @@
 
       <div class="grid grid-3">
         <div id="statistics" class="grid-1 alpha header">
-          <h1><a href="https://github.com/fsprojects/FsProjectsAdmin/">Admin</a> and Statistics</h1>
+          <h1><a href="https://github.com/fslaborg/FsLabAdmin/">Admin</a> and Statistics</h1>
           <p>
-            <a href="https://github.com/fsprojects/FsProjectsAdmin/">Post an issue to add or remove a project</a>.
+            <a href="https://github.com/fslaborg/FsLabAdmin/">Post an issue to add or remove a project</a>.
             <a href="http://fsharp.org/community/projects/">List your project on fsharp.org</a>.
             <a href="http://fsharp.github.io/2014/09/19/fsharp-libraries.html">Follow the guidelines</a>.
           </p>
           <p>
-            <a href="https://github.com/fsprojects/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>. 
-            <a href="https://github.com/fsprojects"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
+            <a href="https://github.com/fslaborg/repositories"><span id="num-repos"><img src="assets/spinner.gif" /></span> public repos</a>. 
+            <a href="https://github.com/fslaborg"><span id="num-members"><img src="assets/spinner.gif" /></span> members</a>
           </p>
         </div>
 
         <div id="recently-updated" class="grid-2 omega header">
-          <h1>Recently updated <a href="https://github.com/fsprojects/repositories">View All on GitHub</a></h1>
+          <h1>Recently updated <a href="https://github.com/fslaborg/repositories">View All on GitHub</a></h1>
           <ol id="recently-updated-repos"></ol>
         </div>
       </div>
